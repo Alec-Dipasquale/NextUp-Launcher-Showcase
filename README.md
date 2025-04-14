@@ -83,4 +83,4 @@ A modern Android launcher built with Jetpack Compose and Kotlin, featuring real-
 
 **Alec Dipasquale**  
 Android Developer • 2+ years experience  
-Open to roles or collaboration — [LinkedIn](https://www.linkedin.com/in/alecdipasquale/) • [Portfolio](https://your-portfolio-link-here.com)
+Open to roles or collaboration — [LinkedIn](https://www.linkedin.com/in/alecdipasquale/)

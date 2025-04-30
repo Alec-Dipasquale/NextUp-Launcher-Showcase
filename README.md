@@ -1,18 +1,45 @@
 # 🚀 NextUp Launcher
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-UI%20Toolkit-orange)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
+NextUp Launcher is a fully custom Android launcher built with Jetpack Compose and Kotlin. It combines a modern homescreen experience with advanced drag-and-drop features, folder management, and a right-swipe content feed powered by Reddit. Designed with clean architecture, responsiveness, and modularity at its core.
 
-A modern Android launcher built with Jetpack Compose and Kotlin, featuring real-time drag-and-drop, dynamic folder creation, and a content-rich right-swipe feed powered by Reddit. Designed with modularity, responsiveness, and developer scalability in mind.
 
 ---
 
 ## ✨ Features
 
-- 🧲 **Real-Time Drag & Drop** — Smooth icon movement, hover zones, and snapping grid behavior  
-- 🗃️ **Folders** — Create, rename, and manage folders inline with support for drag-in/out  
-- 🔍 **Expandable App Drawer** — Swipe-up drawer with full app list, search, and gesture support  
+- 🧲 **Real-Time Drag & Drop** — Smooth icon repositioning with dynamic grid snapping, hover detection, and cross-page movement.
+- 🗃️ **Folders** — Create, rename, and organize apps into folders inline, with intuitive merging and removal behavior
+- 🔍 **Expandable App Drawer** — Swipe-up gesture to reveal a full app list with search and drag support
 - 🎥 **Content Feed** — Right-swipe reveals a customizable feed (currently Reddit videos with ExoPlayer)  
 - 🎨 **Jetpack Compose UI** — Built fully in Compose with a modern Material3 theme  
 - 🔁 **Persistent Layout** — App placements saved with DataStore + Protobuf  
 - 📦 **MVVM + Event-Driven Architecture** — Clean separation of concerns for state and effect handling
+
+- ## 📊 Analytics & Monetization
+
+- Firebase Analytics: Tracks user engagement, dwell time, and feature usage
+- AdMob integration: (Planned/In Progress) – Pre-roll video ads on content feed
+
+- ## 💡 Engineering Highlights
+
+- Custom gesture detectors using raw `pointerInput` and `VelocityTracker`
+- Dynamic page creation and removal based on drag context
+- Full-screen ExoPlayer with custom IMA ad integration and rotation handling
+- Centralized `DragManager` and `MeasurementManager` to coordinate layout and input state
+- Scalable backend with Cloud Functions + Firestore + Cloud Run (`ffmpeg`)
+- Clean architecture with MVVM, event-driven reducers, and sealed intent/effect state modeling
+
+### 🎥 TikTok-Style Vertical Feed
+
+- Fully custom vertical video feed powered by Reddit and ExoPlayer
+- Single active player model with dynamic start/stop logic tied to scroll position
+- Fullscreen transitions and aspect-ratio-aware resize behavior
+- Serverless backend (Cloud Functions + Firestore) fetches and stores Reddit videos
+- Thumbnail generation via `ffmpeg` on Cloud Run for improved load performance
+- Pre-roll ad support (Google IMA SDK) and Firebase Analytics for engagement tracking
+
 
 ---
 
@@ -32,7 +59,7 @@ A modern Android launcher built with Jetpack Compose and Kotlin, featuring real-
 ### Folder Creation
 ![Drag and Homescreen Demo](screenshots/drag_and_homescreen_preview.gif)
 
-### Folder Creation
+### Video Feed Navigation
 ![Feed And Video Demo](screenshots/feed_and_video_preview.gif)
 
 ---

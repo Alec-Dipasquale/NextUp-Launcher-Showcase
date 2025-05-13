@@ -7,6 +7,11 @@ NextUp Launcher is a fully custom Android launcher built with Jetpack Compose an
 
 ---
 
+## 📱 Check Out the Website
+
+👉 [View the NextUp Launcher Demo Website](https://glacira-ltd.com/nextup-presentation.html)
+
+
 ## ✨ Features
 
 - 🧲 **Real-Time Drag & Drop** — Smooth icon repositioning with dynamic grid snapping, hover detection, and cross-page movement.
